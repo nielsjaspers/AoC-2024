@@ -11,7 +11,8 @@ func Day1p2() int {
 		log.Printf("Error while getting file input: %v", err)
 	}
 
-    slices.Sort(rightCol)
+    slices.Sort(leftCol)
+	slices.Sort(rightCol)
 
 	result := listsToMaps(leftCol, rightCol)
 	return result
@@ -19,22 +20,40 @@ func Day1p2() int {
 
 func listsToMaps(leftCol []int, rightCol []int) int {
 	m := make(map[int]int)
+	originalValues := make(map[int]int) 
 
 	var lastIndex int = 0
+	var prevVal int = -1 
 
-    	for _, left := range leftCol {
-        	for i := lastIndex; i < len(rightCol); i++ {
-            		if rightCol[i] == left {
-                		m[left]++
-            		}
-        	}
-    	}
+	for _, left := range leftCol {
+		for i := lastIndex; i < len(rightCol); i++ {
 
-	var total int = 0
+			if rightCol[i] == left {
+				m[left]++
+			}
 
+			if rightCol[i] > left {
+				lastIndex = i
+				break
+			}
+		}
+
+        // check for Duplicate
+		if prevVal == left {
+			m[left] += originalValues[left] 
+		} else {
+			originalValues[left] = m[left]
+		}
+
+		prevVal = left
+
+	}
+
+	total := 0
 	for key, val := range m {
 		total += key * val
 	}
 
 	return total
 }
+
