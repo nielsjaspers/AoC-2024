@@ -1,6 +1,7 @@
 package day1
 
 import (
+	"fmt"
 	"log"
 	"slices"
 )
@@ -11,7 +12,7 @@ func Day1p2() int {
 		log.Printf("Error while getting file input: %v", err)
 	}
 
-    slices.Sort(leftCol)
+	slices.Sort(leftCol)
 	slices.Sort(rightCol)
 
 	result := listsToMaps(leftCol, rightCol)
@@ -20,13 +21,17 @@ func Day1p2() int {
 
 func listsToMaps(leftCol []int, rightCol []int) int {
 	m := make(map[int]int)
-	originalValues := make(map[int]int) 
+	originalValues := make(map[int]int)
 
 	var lastIndex int = 0
-	var prevVal int = -1 
+	var prevVal int = -1
+
+    var index int = 0
 
 	for _, left := range leftCol {
 		for i := lastIndex; i < len(rightCol); i++ {
+            index++
+			//fmt.Printf("l: %v\t\tr: %v\n", left, rightCol[i])
 
 			if rightCol[i] == left {
 				m[left]++
@@ -38,9 +43,9 @@ func listsToMaps(leftCol []int, rightCol []int) int {
 			}
 		}
 
-        // check for Duplicate
+		// check for Duplicate
 		if prevVal == left {
-			m[left] += originalValues[left] 
+			m[left] += originalValues[left]
 		} else {
 			originalValues[left] = m[left]
 		}
@@ -53,7 +58,6 @@ func listsToMaps(leftCol []int, rightCol []int) int {
 	for key, val := range m {
 		total += key * val
 	}
-
+    fmt.Printf("Total times looped: %v\n", index)
 	return total
 }
-
