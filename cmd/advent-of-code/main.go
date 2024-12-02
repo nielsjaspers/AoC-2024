@@ -8,12 +8,15 @@ import (
 )
 
 func main() {
-    // Day 1 Part 1
-    // fmt.Printf("Distance: %v\n", day1.Day1())
-    
-    // Day 1 Part 2
-    // fmt.Printf("Score: %v\n", day1.Day1p2())
+	// Day 1 Part 1
+	// fmt.Printf("Distance: %v\n", day1.Day1())
 
-    // Day 2 Part 1
-    fmt.Printf("Amount Safe: %v\n", day2.Day2())
+	// Day 1 Part 2
+	// fmt.Printf("Score: %v\n", day1.Day1p2())
+
+	// Day 2 Part 1
+	// fmt.Printf("Amount Safe: %v\n", day2.Day2())
+
+	// Day 2 Part 2
+	fmt.Printf("Amount Safe: %v\n", day2.Day2_p2())
 }
