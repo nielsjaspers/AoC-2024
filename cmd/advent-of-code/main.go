@@ -22,5 +22,8 @@ func main() {
 	// fmt.Printf("Amount Safe: %v\n", day2.Day2_p2())
 
     // Day 3 Part 1
-    fmt.Printf("Total: %v\n", day3.Day3())
+    // fmt.Printf("Total: %v\n", day3.Day3())
+
+    // Day 3 Part 2
+    fmt.Printf("Total: %v\n", day3.Day3_p2())
 }
