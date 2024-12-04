@@ -25,12 +25,10 @@ func isValidLineP2(line []int) bool {
 		return false
 	}
 
-	// Check if line is valid without removing any level
 	if isStrictlyValid(line) {
 		return true
 	}
 
-	// Try removing each level and check if the line becomes valid
 	for i := 0; i < len(line); i++ {
 		newLine := append([]int{}, line[:i]...)
 		newLine = append(newLine, line[i+1:]...)

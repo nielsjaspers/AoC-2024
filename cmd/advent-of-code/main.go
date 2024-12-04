@@ -4,7 +4,8 @@ import (
 	"fmt"
 
 	//"github.com/nielsjaspers/adventofcode2024/internal/days/day1"
-	"github.com/nielsjaspers/adventofcode2024/internal/days/day2"
+	//"github.com/nielsjaspers/adventofcode2024/internal/days/day2"
+	"github.com/nielsjaspers/adventofcode2024/internal/days/day3"
 )
 
 func main() {
@@ -18,5 +19,8 @@ func main() {
 	// fmt.Printf("Amount Safe: %v\n", day2.Day2())
 
 	// Day 2 Part 2
-	fmt.Printf("Amount Safe: %v\n", day2.Day2_p2())
+	// fmt.Printf("Amount Safe: %v\n", day2.Day2_p2())
+
+    // Day 3 Part 1
+    fmt.Printf("Total: %v\n", day3.Day3())
 }
