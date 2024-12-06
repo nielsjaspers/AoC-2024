@@ -6,7 +6,8 @@ import (
 	// "github.com/nielsjaspers/adventofcode2024/internal/days/day1"
 	// "github.com/nielsjaspers/adventofcode2024/internal/days/day2"
 	// "github.com/nielsjaspers/adventofcode2024/internal/days/day3"
-	"github.com/nielsjaspers/adventofcode2024/internal/days/day4"
+	// "github.com/nielsjaspers/adventofcode2024/internal/days/day4"
+	"github.com/nielsjaspers/adventofcode2024/internal/days/day5"
 )
 
 func main() {
@@ -32,5 +33,8 @@ func main() {
     // fmt.Printf("Total: %v\n", day4.Day4())
     
     // Day 4 Part 2
-    fmt.Printf("Total: %v\n", day4.Day4_p2())
+    // fmt.Printf("Total: %v\n", day4.Day4_p2())
+
+    // Day 5 Part 1
+    fmt.Printf("Sum: %v\n", day5.Day5())
 }
