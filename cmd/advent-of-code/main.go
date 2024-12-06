@@ -36,5 +36,8 @@ func main() {
     // fmt.Printf("Total: %v\n", day4.Day4_p2())
 
     // Day 5 Part 1
-    fmt.Printf("Sum: %v\n", day5.Day5())
+    // fmt.Printf("Sum: %v\n", day5.Day5())
+    
+    // Day 5 Part 2
+    fmt.Printf("Sum: %v\n", day5.Day5_p2())
 }

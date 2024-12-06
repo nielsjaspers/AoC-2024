@@ -3,12 +3,12 @@ package day4
 import "log"
 
 func Day4_p2() int {
-    in, err := getFileInput("internal/input/day4.input")
-    if err != nil {
-        log.Fatalf("Error while getting file input: %v\n", err)
-    }
-    result := countOccurrencesP2(in)
-    return result
+	in, err := getFileInput("internal/input/day4.input")
+	if err != nil {
+		log.Fatalf("Error while getting file input: %v\n", err)
+	}
+	result := countOccurrencesP2(in)
+	return result
 }
 
 func countOccurrencesP2(grid []string) int {
